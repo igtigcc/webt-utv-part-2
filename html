@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Website</title>
+    <style>
+        body {
+            /* Rensar marginaler och sätter full skärmhöjd */
+            margin: 0;
+            padding: 40px;
+            height: 100vh;
+            box-sizing: border-box;
+
+            /* Skapar en gradient med rött, vitt och blått som är 400% bredare än skärmen */
+            background: linear-gradient(-45deg, #ff4d4d, #ffffff, #33b5e5);
+            background-size: 400% 400%;
+            
+            /* Startar animationen som heter "colorShift" (tar 12 sekunder och loopar oändligt) */
+            animation: colorShift 12s ease infinite;
+        }
+
+        /* Här bestäms hur bakgrunden ska flytta på sig för att skifta färg */
+        @keyframes colorShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Styling för din text så att den syns bra mot både ljusa och mörka färger */
+        h1, p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000000; /* Mörkgrå text */
+            /* En mjuk ljus skugga runt texten gör den lättläst när bakgrunden blir mörk */
+            text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.9);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+        .btn-container1 {
+            display: flex;
+            position: fixed;
+            gap: 40px;
+            font-family: Arial, sans-serif;
+            bottom: 100px;
+        }
+        .btn {
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .red { background-color: #ff4d4d; }
+        .green { background-color: #180d08; }
+        .blue { background-color: #3498db; }
+        .orange{background-color: rgb(23, 177, 177);}            
+        img {
+            width: 50%;
+            height: 70%;
+        }
+
+        div.fixed {
+            position: fixed;
+            right: -350px;
+            width: 900px;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fixed">
+        <img src="https://static.bonniernews.se/ba/16204c4d-c14f-47e5-a371-f7a97c79b541.jpeg?width=1400&format=pjpg&auto=avif" alt="Monkey taking a screenshot of himself">
+    </div>
+    
+    <h1>My intrest website</h1>
+    <p>Here will you learn about my 3 intrest in stuff and more</p>
+    
+   
+    <!-- Här är dina knappar inbakade i länkar till dina nya sidor -->
+    <div class="btn-container">
+        
+        <a href="spel.html"><button class="btn red">games</button>
+    
+        <a href="anime.html"><button class="btn green">anime</button></a>
+        <a href="snacks.html"><button class="btn blue">snacks</button></a>
+        
+    </div>
+    <h1> Heros and epokes</h1>
+    <p> Here will you learn about heros and epokes</p>
+<div class="btn-container1">
+    <a href="Untitled-1.html"><button class="btn orange">history and heros</button></a>
+
+</div>
+</body>
+</html>
